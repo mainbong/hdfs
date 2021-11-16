@@ -19,7 +19,7 @@ func (c *Client) walk(path string, walkFn filepath.WalkFunc) error {
 	file, err := c.Open(path)
 	var info os.FileInfo
 	if file != nil {
-		info = file.Stat()
+		info, _ = file.Stat()
 	}
 
 	err = walkFn(path, info, err)

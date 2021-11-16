@@ -23,7 +23,7 @@ func cat(paths []string) {
 		file, err := client.Open(p)
 		if err != nil {
 			fatal(err)
-		} else if file.Stat().IsDir() {
+		} else if stat, _ := file.Stat(); stat.IsDir() {
 			fatal(&os.PathError{"cat", p, errors.New("file is a directory")})
 		}
 
@@ -50,8 +50,9 @@ func printSection(paths []string, numLines, numBytes int64, fromEnd bool) {
 
 	for _, p := range expanded {
 		file, err := client.Open(p)
-		if err != nil || file.Stat().IsDir() {
-			if err == nil && file.Stat().IsDir() {
+		stat, _ := file.Stat()
+		if err != nil || stat.IsDir() {
+			if err == nil && stat.IsDir() {
 				err = &os.PathError{"open", p, errors.New("file is a directory")}
 			}
 
@@ -73,7 +74,8 @@ func printSection(paths []string, numLines, numBytes int64, fromEnd bool) {
 		} else {
 			var offset int64
 			if fromEnd {
-				offset = file.Stat().Size() - numBytes
+				stat, _ := file.Stat()
+				offset = stat.Size() - numBytes
 			}
 
 			reader := io.NewSectionReader(file, offset, numBytes)
@@ -115,8 +117,9 @@ func headLines(file *hdfs.FileReader, numLines int64) {
 }
 
 func tailLines(file *hdfs.FileReader, numLines int64) {
-	fileSize := file.Stat().Size()
-	searchPoint := file.Stat().Size() - tailSearchSize
+	stat, _ := file.Stat()
+	fileSize := stat.Size()
+	searchPoint := stat.Size() - tailSearchSize
 	if searchPoint < 0 {
 		searchPoint = 0
 	}

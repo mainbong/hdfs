@@ -51,9 +51,14 @@ func (f *FileReader) Name() string {
 	return f.info.Name()
 }
 
+// func (f *FileReader) Stat() os.FileInfo {
+// 	return f.info
+// }
+
+// Stat implements fs.File.Stat()
 // Stat returns the FileInfo structure describing file.
-func (f *FileReader) Stat() os.FileInfo {
-	return f.info
+func (f *FileReader) Stat() (os.FileInfo, error) {
+	return f.info, nil
 }
 
 // SetDeadline sets the deadline for future Read, ReadAt, and Checksum calls. A

@@ -48,7 +48,7 @@ func TestFileRead(t *testing.T) {
 	assert.NoError(t, err)
 	assert.EqualValues(t, "bar\n", string(bytes))
 
-	info := file.Stat()
+	info, _ := file.Stat()
 	assert.False(t, info.IsDir())
 	assert.EqualValues(t, 4, info.Size())
 	assert.EqualValues(t, time.Now().Year(), info.ModTime().Year())
