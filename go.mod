@@ -1,4 +1,4 @@
-module github.com/colinmarc/hdfs/v2
+module github.com/mainbong/hdfs
 
 require (
 	github.com/golang/protobuf v1.1.0
@@ -8,4 +8,4 @@ require (
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 )
 
-go 1.13
+go 1.17
