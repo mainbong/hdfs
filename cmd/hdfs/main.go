@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/colinmarc/hdfs/v2"
-	"github.com/mainbong/hdfs/hadoopconf"
+	"github.com/mainbong/hdfs/v2/hadoopconf"
 	"github.com/pborman/getopt"
 )
 

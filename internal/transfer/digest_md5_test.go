@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	hadoop "github.com/mainbong/hdfs/internal/protocol/hadoop_common"
-	hdfs "github.com/mainbong/hdfs/internal/protocol/hadoop_hdfs"
-	"github.com/mainbong/hdfs/internal/sasl"
+	hadoop "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_common"
+	hdfs "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_hdfs"
+	"github.com/mainbong/hdfs/v2/internal/sasl"
 )
 
 func getTestDigest() *digestMD5Handshake {

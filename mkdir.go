@@ -5,7 +5,7 @@ import (
 	"path"
 
 	"github.com/golang/protobuf/proto"
-	hdfs "github.com/mainbong/hdfs/internal/protocol/hadoop_hdfs"
+	hdfs "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_hdfs"
 )
 
 // Mkdir creates a new directory with the specified name and permission bits.

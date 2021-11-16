@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	hdfs "github.com/mainbong/hdfs/internal/protocol/hadoop_hdfs"
-	"github.com/mainbong/hdfs/internal/transfer"
+	hdfs "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_hdfs"
+	"github.com/mainbong/hdfs/v2/internal/transfer"
 )
 
 // A FileWriter represents a writer for an open file in HDFS. It implements

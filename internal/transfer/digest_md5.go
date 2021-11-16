@@ -10,7 +10,7 @@ import (
 	"net"
 	"strings"
 
-	"github.com/mainbong/hdfs/internal/sasl"
+	"github.com/mainbong/hdfs/v2/internal/sasl"
 )
 
 const (

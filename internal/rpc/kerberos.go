@@ -10,8 +10,8 @@ import (
 	"github.com/jcmturner/gokrb5/v8/iana/keyusage"
 	"github.com/jcmturner/gokrb5/v8/spnego"
 	krbtypes "github.com/jcmturner/gokrb5/v8/types"
-	hadoop "github.com/mainbong/hdfs/internal/protocol/hadoop_common"
-	"github.com/mainbong/hdfs/internal/sasl"
+	hadoop "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_common"
+	"github.com/mainbong/hdfs/v2/internal/sasl"
 )
 
 const saslRpcCallId = -33

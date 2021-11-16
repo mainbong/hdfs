@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	hdfs "github.com/mainbong/hdfs/internal/protocol/hadoop_hdfs"
+	hdfs "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_hdfs"
 )
 
 var ErrEndOfBlock = errors.New("end of block")

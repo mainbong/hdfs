@@ -1,4 +1,4 @@
-module github.com/mainbong/hdfs/v2
+module github.com/mainbong/hdfs/v2/v2
 
 require (
 	github.com/golang/protobuf v1.1.0

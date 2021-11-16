@@ -10,7 +10,7 @@ import (
 	"github.com/jcmturner/gokrb5/v8/gssapi"
 	"github.com/jcmturner/gokrb5/v8/iana/keyusage"
 	krbtypes "github.com/jcmturner/gokrb5/v8/types"
-	hadoop "github.com/mainbong/hdfs/internal/protocol/hadoop_common"
+	hadoop "github.com/mainbong/hdfs/v2/internal/protocol/hadoop_common"
 )
 
 // saslTransport implements encrypted or signed RPC.
