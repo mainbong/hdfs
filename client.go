@@ -11,12 +11,12 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/colinmarc/hdfs/v2/hadoopconf"
-	hadoop "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_common"
-	hdfs "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_hdfs"
-	"github.com/colinmarc/hdfs/v2/internal/rpc"
-	"github.com/colinmarc/hdfs/v2/internal/transfer"
 	krb "github.com/jcmturner/gokrb5/v8/client"
+	"github.com/mainbong/hdfs/hadoopconf"
+	hadoop "github.com/mainbong/hdfs/internal/protocol/hadoop_common"
+	hdfs "github.com/mainbong/hdfs/internal/protocol/hadoop_hdfs"
+	"github.com/mainbong/hdfs/internal/rpc"
+	"github.com/mainbong/hdfs/internal/transfer"
 )
 
 type dialContext func(ctx context.Context, network, addr string) (net.Conn, error)
