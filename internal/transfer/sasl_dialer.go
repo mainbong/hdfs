@@ -9,9 +9,9 @@ import (
 
 	"github.com/golang/protobuf/proto"
 
-	hadoop "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_common"
-	hdfs "github.com/colinmarc/hdfs/v2/internal/protocol/hadoop_hdfs"
-	"github.com/colinmarc/hdfs/v2/internal/sasl"
+	hadoop "github.com/mainbong/hdfs/internal/protocol/hadoop_common"
+	hdfs "github.com/mainbong/hdfs/internal/protocol/hadoop_hdfs"
+	"github.com/mainbong/hdfs/internal/sasl"
 )
 
 const (
